@@ -14,6 +14,9 @@
 |firefox57 |Gecko/20100101 Firefox/57.0.2|-|-|
 |firefox39 |Gecko/20100101 Firefox/39.0|-|-|
 |safari11 | 11.0.1 (13604.3.5)|-|-|
+|node |8.9.1|v8 6.1.534.47|
+
+
 # Chrome 63
 
 | category    | short-name |

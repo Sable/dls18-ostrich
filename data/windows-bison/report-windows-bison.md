@@ -8,9 +8,10 @@
 # Web Environments
 |environment    |version | JS Engine Version|Developer Build|
 |---            |------- |------- |-------|
-|chrome         |63.0.3239.84 | 6.3.292.46|-|
+|chrome         |63.0.3239.84 |v8 6.3.292.46|-|
 |firefox        |Gecko/20100101 Firefox/57.0.2|-|-|
 |microsoft-edge |38.14393.1066.0|-|-|
+|Node |8.9.3 |v8 6.1.534.47| |
 # All Results
 
 | category   | short-name    |
@@ -187,3 +188,40 @@
 | pagerank  | 0.7507  | 0.0168 | 0.7322  | 0.8096  | 30          |
 | spmv      | 2.3218  | 0.0726 | 2.2701  | 2.6334  | 30          |
 | srad      | 15.9899 | 0.3612 | 15.6939 | 17.4402 | 30          |
+# Node
+| category    | short-name                |
+| ----------- | ------------------------- |
+| platform    | windows-bison             |
+| environment | node-remote-windows-bison |
+| input-size  | medium                    |
+| file | platform=windows-bison,environment=node-remote-windows-bison,input-size=medium.csv|
+
+
+### Results ###
+
+| benchmark | implementation | compiler    | mean(s) | std(s) | min(s) | max(s) | repetitions |
+| --------- | -------------- | ----------- | ------- | ------ | ------ | ------ | ----------- |
+| backprop  | c              | server-wasm | 0.7662  | 0.0112 | 0.7500 | 0.7970 | 30          |
+| backprop  | js             | browserify  | 1.5038  | 0.0246 | 1.4680 | 1.5780 | 30          |
+| bfs       | cpp            | server-wasm | 0.1318  | 0.0079 | 0.1250 | 0.1410 | 30          |
+| bfs       | js             | browserify  | 0.8924  | 0.0049 | 0.8900 | 0.9070 | 30          |
+| crc       | c              | server-wasm | 0.9395  | 0.0054 | 0.9370 | 0.9530 | 30          |
+| crc       | js             | browserify  | 0.9094  | 0.0063 | 0.9060 | 0.9210 | 30          |
+| fft       | c              | server-wasm | 0.8932  | 0.0082 | 0.8750 | 0.9060 | 30          |
+| fft       | js             | browserify  | 2.0673  | 0.0204 | 2.0460 | 2.1560 | 30          |
+| hmm       | c              | server-wasm | 2.3383  | 0.0094 | 2.3130 | 2.3600 | 30          |
+| hmm       | js             | browserify  | 3.9533  | 0.0126 | 3.9370 | 3.9840 | 30          |
+| lavamd    | c              | server-wasm | 1.1857  | 0.0068 | 1.1720 | 1.2030 | 30          |
+| lavamd    | js             | browserify  | 1.7297  | 0.0083 | 1.7180 | 1.7500 | 30          |
+| lud       | c              | server-wasm | 1.9406  | 0.0388 | 1.8750 | 2.0000 | 30          |
+| lud       | js             | browserify  | 2.0072  | 0.0588 | 1.9370 | 2.1870 | 30          |
+| nqueens   | c              | server-wasm | 3.9290  | 0.0271 | 3.9070 | 4.0470 | 30          |
+| nqueens   | js             | browserify  | 6.1319  | 0.0814 | 6.0470 | 6.3900 | 30          |
+| nw        | c              | server-wasm | 0.5468  | 0.0004 | 0.5460 | 0.5470 | 30          |
+| nw        | js             | browserify  | 1.0208  | 0.0106 | 1.0150 | 1.0620 | 30          |
+| pagerank  | c              | server-wasm | 0.7157  | 0.0064 | 0.7030 | 0.7190 | 30          |
+| pagerank  | js             | browserify  | 0.8627  | 0.0069 | 0.8590 | 0.8750 | 30          |
+| spmv      | c              | server-wasm | 0.9079  | 0.0112 | 0.8900 | 0.9380 | 30          |
+| spmv      | js             | browserify  | 1.9709  | 0.0532 | 1.9060 | 2.1560 | 30          |
+| srad      | c              | server-wasm | 3.5789  | 0.0172 | 3.5470 | 3.6250 | 30          |
+| srad      | js             | browserify  | 6.6252  | 0.0648 | 6.5150 | 6.7500 | 30          |
