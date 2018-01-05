@@ -12,7 +12,8 @@
 | __SMART PHONES__   |    |||||||
 | sumsung8 | Octa-core (2.3GHz Quad + 1.7GHz Quad), 64 bit, 10nm processor | 4GB | android 8.0.0 | - | - | [report](./data/samsung8/report-samsung8.md) | [sumsung8.csv](./data/samsung8/browser/platform=samsung8,input-size=medium.csv) |
 | pixel2  | Qualcomm MSM8998 Snapdragon 835, Octa-core (4x2.35 GHz Kryo & 4x1.9 GHz Kryo) | 4 GB | android 8.0.0 | - | - |[report](./data/pixel2/report-pixel2.md) | [pixel2.csv](./data/pixel2/browser/platform=pixel2,input-size=medium.csv) |
-| iPhone 8 | - | - | - | - | - | - | - | 
+| iphone8 | - | - | - | - | - | - | - | 
+| __S. B. Computers__   |    |||||||
 | raspberry-pi-3 | 1.2 GHZ quad-core ARM Cortex A53 (ARMv8 Instruction Set) | 1 GB | Linux Raspberry Pi 4.9.35-v7 | - | - | [report](./data/raspberry-pi-3/report-raspberry-pi-3.md) | [raspberry-pi-3.csv](./data/raspberry-pi-3/server/platform=raspberry3,environment=node-remote-raspberry,input-size=medium.csv)|
 
 # NOTE: 
