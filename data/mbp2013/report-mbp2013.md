@@ -15,6 +15,7 @@
 |firefox39 |Gecko/20100101 Firefox/39.0|-|-|
 |safari11 | 11.0.1 (13604.3.5)|-|-|
 |node |8.9.1|v8 6.1.534.47|
+|native| llvm-gcc 4.2.1 | - | - |
 
 
 # Chrome 63
@@ -213,3 +214,30 @@ implementation=js,compiler=browserify,platform=mbp2013,environment=chromium38,in
 | pagerank  | c              | wasm       | 0.5465s | +-0.0072s | 0.5360s | 0.5720s | 30          |
 | srad      | js             | browserify | 5.5862s | +-0.0926s | 5.4519s | 5.9214s | 30          |
 | srad      | c              | wasm       | 4.2460s | +-0.0390s | 4.1900s | 4.3180s | 30          |
+
+# Native
+### Invariants (configuration parameters that are the same for all runs) ###
+
+| category    | short-name |
+| ----------- | ---------- |
+| platform    | mbp2013    |
+| environment | native     |
+| input-size  | medium     |
+platform=mbp2013,environment=native,input-size=medium.csv
+
+### Results ###
+
+| benchmark | implementation | compiler | mean(s) | std(s) | min(s) | max(s) | repetitions |
+| --------- | -------------- | -------- | ------- | ------ | ------ | ------ | ----------- |
+| backprop  | c              | gcc      | 0.6160  | 0.0154 | 0.5844 | 0.6405 | 10          |
+| bfs       | cpp            | g++      | 0.1715  | 0.0087 | 0.1521 | 0.1822 | 10          |
+| crc       | c              | gcc      | 0.9549  | 0.0080 | 0.9394 | 0.9696 | 10          |
+| fft       | c              | gcc      | 1.5445  | 0.0060 | 1.5359 | 1.5523 | 10          |
+| hmm       | c              | gcc      | 2.6249  | 0.1712 | 2.4314 | 2.9247 | 10          |
+| lavamd    | c              | gcc      | 0.9054  | 0.0047 | 0.8973 | 0.9161 | 10          |
+| lud       | c              | gcc      | 2.0016  | 0.0403 | 1.9541 | 2.0959 | 10          |
+| nqueens   | c              | gcc      | 3.2585  | 0.0092 | 3.2444 | 3.2709 | 10          |
+| nw        | c              | gcc      | 0.1081  | 0.0017 | 0.1057 | 0.1110 | 10          |
+| pagerank  | c              | gcc      | 0.3272  | 0.0110 | 0.3163 | 0.3554 | 10          |
+| spmv      | c              | gcc      | 0.7738  | 0.0334 | 0.7384 | 0.8478 | 10          |
+| srad      | c              | gcc      | 3.2852  | 0.0295 | 3.2528 | 3.3516 | 10          |
