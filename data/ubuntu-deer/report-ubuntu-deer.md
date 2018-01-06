@@ -8,12 +8,53 @@
 # Web Environments
 |environment    |version | JS Engine Version|
 |---            |------- |------- |
-|firefox34 |Gecko/20100101 Firefox/34.0|-|
-|firefox39|Gecko/20100101 Firefox/39.0|-|
-|firefox57|Gecko/20100101 Firefox/57.0|-|
-|chromium38|38.0.2125.0|V8 3.28.71.2|
+|firefox34 |Firefox/34.0|-|
+|firefox39|Firefox/39.0|-|
+|firefox57|Firefox/57.0|-|
+|chrome63|63.0.3239.132|V8 6.3.292.49|
 |chromium63|63.0.3229.0|V8 6.3.292|
+|chromium38|38.0.2125.0|V8 3.28.71.2|
 |node | v8.9.1|V8 6.1.534.47|
+|native | - | - |
+
+# Chrome 63
+### Invariants (configuration parameters that are the same for all runs) ###
+
+| category    | short-name  |
+| ----------- | ----------- |
+| platform    | ubuntu-deer |
+| environment | chrome63    |
+| input-size  | medium      |
+platform=ubuntu-deer,environment=chrome63,input-size=medium.csv
+
+### Results ###
+
+| benchmark | implementation | compiler   | mean    | std    | min     | max     | repetitions |
+| --------- | -------------- | ---------- | ------- | ------ | ------- | ------- | ----------- |
+| backprop  | js             | browserify | 1.4103  | 0.0064 | 1.4015  | 1.4245  | 10          |
+| backprop  | c              | wasm       | 0.7691  | 0.0040 | 0.7640  | 0.7760  | 10          |
+| bfs       | cpp            | wasm       | 0.1496  | 0.0020 | 0.1480  | 0.1550  | 10          |
+| bfs       | js             | browserify | 0.2757  | 0.0017 | 0.2718  | 0.2781  | 10          |
+| crc       | c              | wasm       | 1.2013  | 0.0137 | 1.1880  | 1.2250  | 10          |
+| crc       | js             | browserify | 0.9827  | 0.0300 | 0.9053  | 1.0232  | 10          |
+| fft       | c              | wasm       | 1.0798  | 0.0366 | 1.0420  | 1.1670  | 10          |
+| fft       | js             | browserify | 4.9922  | 0.0794 | 4.9002  | 5.1127  | 10          |
+| hmm       | c              | wasm       | 2.4696  | 0.0818 | 2.4240  | 2.6980  | 10          |
+| hmm       | js             | browserify | 4.0027  | 0.0188 | 3.9736  | 4.0314  | 10          |
+| lavamd    | c              | wasm       | 1.3137  | 0.0221 | 1.2870  | 1.3580  | 10          |
+| lavamd    | js             | browserify | 1.6998  | 0.0728 | 1.6596  | 1.8891  | 10          |
+| lud       | c              | wasm       | 0.8495  | 0.1167 | 0.7990  | 1.1810  | 10          |
+| lud       | js             | browserify | 1.2311  | 0.0459 | 1.1870  | 1.3290  | 10          |
+| nqueens   | c              | wasm       | 3.9922  | 0.0617 | 3.9520  | 4.1550  | 10          |
+| nqueens   | js             | browserify | 6.0809  | 0.0218 | 6.0450  | 6.1270  | 10          |
+| nw        | c              | wasm       | 0.5750  | 0.0017 | 0.5730  | 0.5780  | 10          |
+| nw        | js             | browserify | 0.9503  | 0.0072 | 0.9427  | 0.9648  | 10          |
+| pagerank  | c              | wasm       | 0.7809  | 0.0049 | 0.7780  | 0.7940  | 10          |
+| pagerank  | js             | browserify | 0.8708  | 0.0033 | 0.8656  | 0.8776  | 10          |
+| spmv      | c              | wasm       | 0.9746  | 0.0150 | 0.9640  | 1.0160  | 10          |
+| spmv      | js             | browserify | 23.5353 | 0.1895 | 23.4073 | 24.0321 | 10          |
+| srad      | c              | wasm       | 3.7024  | 0.0208 | 3.6580  | 3.7370  | 10          |
+| srad      | js             | browserify | 7.1341  | 0.1670 | 7.0334  | 7.5286  | 10          |
 
 ### Invariants (configuration parameters that are the same for all runs) ###
 
@@ -108,6 +149,46 @@ NOTE:Compatibility problem Firefox 34.0 for ndarray library in Lud benchmark
 | spmv      | c              | wasm       | 0.9242s | +-0.0386s | 0.8990s | 1.0860s | 30          |
 | srad      | js             | browserify | 7.3579s | +-0.1458s | 7.1386s | 7.6458s | 30          |
 | srad      | c              | wasm       | 3.5365s | +-0.0674s | 3.4730s | 3.7650s | 30          |
+# Chrome 63
+### Invariants (configuration parameters that are the same for all runs) ###
+
+| category    | short-name  |
+| ----------- | ----------- |
+| platform    | ubuntu-deer |
+| environment | chrome63    |
+| input-size  | medium      |
+platform=ubuntu-deer,environment=chrome63,input-size=medium.csv
+
+### Results ###
+
+| benchmark | implementation | compiler   | mean    | std    | min     | max     | repetitions |
+| --------- | -------------- | ---------- | ------- | ------ | ------- | ------- | ----------- |
+| backprop  | js             | browserify | 1.4103  | 0.0064 | 1.4015  | 1.4245  | 10          |
+| backprop  | c              | wasm       | 0.7691  | 0.0040 | 0.7640  | 0.7760  | 10          |
+| bfs       | cpp            | wasm       | 0.1496  | 0.0020 | 0.1480  | 0.1550  | 10          |
+| bfs       | js             | browserify | 0.2757  | 0.0017 | 0.2718  | 0.2781  | 10          |
+| crc       | c              | wasm       | 1.2013  | 0.0137 | 1.1880  | 1.2250  | 10          |
+| crc       | js             | browserify | 0.9827  | 0.0300 | 0.9053  | 1.0232  | 10          |
+| fft       | c              | wasm       | 1.0798  | 0.0366 | 1.0420  | 1.1670  | 10          |
+| fft       | js             | browserify | 4.9922  | 0.0794 | 4.9002  | 5.1127  | 10          |
+| hmm       | c              | wasm       | 2.4696  | 0.0818 | 2.4240  | 2.6980  | 10          |
+| hmm       | js             | browserify | 4.0027  | 0.0188 | 3.9736  | 4.0314  | 10          |
+| lavamd    | c              | wasm       | 1.3137  | 0.0221 | 1.2870  | 1.3580  | 10          |
+| lavamd    | js             | browserify | 1.6998  | 0.0728 | 1.6596  | 1.8891  | 10          |
+| lud       | c              | wasm       | 0.8495  | 0.1167 | 0.7990  | 1.1810  | 10          |
+| lud       | js             | browserify | 1.2311  | 0.0459 | 1.1870  | 1.3290  | 10          |
+| nqueens   | c              | wasm       | 3.9922  | 0.0617 | 3.9520  | 4.1550  | 10          |
+| nqueens   | js             | browserify | 6.0809  | 0.0218 | 6.0450  | 6.1270  | 10          |
+| nw        | c              | wasm       | 0.5750  | 0.0017 | 0.5730  | 0.5780  | 10          |
+| nw        | js             | browserify | 0.9503  | 0.0072 | 0.9427  | 0.9648  | 10          |
+| pagerank  | c              | wasm       | 0.7809  | 0.0049 | 0.7780  | 0.7940  | 10          |
+| pagerank  | js             | browserify | 0.8708  | 0.0033 | 0.8656  | 0.8776  | 10          |
+| spmv      | c              | wasm       | 0.9746  | 0.0150 | 0.9640  | 1.0160  | 10          |
+| spmv      | js             | browserify | 23.5353 | 0.1895 | 23.4073 | 24.0321 | 10          |
+| srad      | c              | wasm       | 3.7024  | 0.0208 | 3.6580  | 3.7370  | 10          |
+| srad      | js             | browserify | 7.1341  | 0.1670 | 7.0334  | 7.5286  | 10          |
+
+
 
 # Node 
 | category    | short-name              |
@@ -147,3 +228,30 @@ NOTE:Compatibility problem Firefox 34.0 for ndarray library in Lud benchmark
 | srad      | c              | server-wasm | 47.7410 | 1.6126 | 47.3150 | 56.2610 | 30          |
 | srad      | js             | browserify  | 55.8755 | 0.3237 | 55.5240 | 56.6780 | 30          |
 
+# Native
+
+### Invariants (configuration parameters that are the same for all runs) ###
+
+| category    | short-name         |
+| ----------- | ------------------ |
+| platform    | ubuntu-deer        |
+| environment | native |
+| input-size  | medium             |
+platform=ubuntu-deer,environment=native-ubuntu-deer,input-size=medium.csv
+
+### Results ###
+
+| benchmark | implementation | compiler | mean   | std    | min    | max    | repetitions |
+| --------- | -------------- | -------- | ------ | ------ | ------ | ------ | ----------- |
+| backprop  | c              | gcc      | 0.4434 | 0.0016 | 0.4409 | 0.4456 | 10          |
+| bfs       | cpp            | g++      | 0.1044 | 0.0021 | 0.1034 | 0.1103 | 10          |
+| crc       | c              | gcc      | 0.7556 | 0.0434 | 0.7295 | 0.8707 | 10          |
+| fft       | c              | gcc      | 1.1289 | 0.0133 | 1.1146 | 1.1559 | 10          |
+| hmm       | c              | gcc      | 1.8158 | 0.0286 | 1.7817 | 1.8584 | 10          |
+| lavamd    | c              | gcc      | 3.4651 | 0.0375 | 3.4261 | 3.5436 | 10          |
+| lud       | c              | gcc      | 0.6026 | 0.0290 | 0.5703 | 0.6494 | 10          |
+| nqueens   | c              | gcc      | 2.7059 | 0.0378 | 2.6663 | 2.7734 | 10          |
+| nw        | c              | gcc      | 0.1007 | 0.0073 | 0.0954 | 0.1142 | 10          |
+| pagerank  | c              | gcc      | 0.6023 | 0.1622 | 0.1705 | 0.7113 | 10          |
+| spmv      | c              | gcc      | 0.6596 | 0.0289 | 0.6275 | 0.7191 | 10          |
+| srad      | c              | gcc      | 2.8692 | 0.0346 | 2.8310 | 2.9532 | 10          |
