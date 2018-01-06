@@ -76,3 +76,43 @@ platform=iphone10,environment=firefox-iphone10,input-size=medium.csv
 | spmv      | js             | browserify | 2.2151  | 0.1070 | 2.1152 | 2.3988 | 10          |
 | srad      | c              | wasm       | 3.3437  | 0.0016 | 3.3420 | 3.3470 | 10          |
 | srad      | js             | browserify | 2.7791  | 0.0091 | 2.7643 | 2.7937 | 10          |
+
+
+
+### Invariants (configuration parameters that are the same for all runs) ###
+
+| category    | short-name      |
+| ----------- | --------------- |
+| platform    | iphone10        |
+| environment | safari-iphone10 |
+| input-size  | medium          |
+platform=iphone10,environment=safari-iphone10,input-size=medium.csv
+
+### Results ###
+
+| benchmark | implementation | compiler   | mean(s) | std(s) | min(s) | max(s) | repetitions|
+| --------- | -------------- | ---------- | ------- | ------ | ------ | ------ | -----------|
+| backprop  | c              | wasm       | 0.3464  | 0.0118 | 0.3320 | 0.3590 | 10|
+| backprop  | js             | browserify | 0.6669  | 0.0317 | 0.6274 | 0.7168 | 10|
+| bfs       | cpp            | wasm       | 0.1946  | 0.0035 | 0.1900 | 0.2000 | 10|
+| bfs       | js             | browserify | 6.2320  | 0.1385 | 6.0064 | 6.5174 | 10|
+| crc       | c              | wasm       | 1.1727  | 0.0057 | 1.1630 | 1.1860 | 10|
+| crc       | js             | browserify | 1.2841  | 0.0041 | 1.2770 | 1.2900 | 10|
+| fft       | c              | wasm       | 0.8647  | 0.0024 | 0.8610 | 0.8690 | 10|
+| fft       | js             | browserify | 0.7848  | 0.0327 | 0.7356 | 0.8608 | 10|
+| hmm       | c              | wasm       | 2.7593  | 0.0125 | 2.7290 | 2.7740 | 10|
+| hmm       | js             | browserify | 1.9425  | 0.0069 | 1.9258 | 1.9510 | 10|
+| lavamd    | c              | wasm       | 1.4687  | 0.0140 | 1.4400 | 1.4850 | 10|
+| lavamd    | js             | browserify | 1.1222  | 0.0276 | 1.0864 | 1.1723 | 10|
+| lud       | c              | wasm       | 1.6407  | 1.7246 | 1.0840 | 6.5490 | 10|
+| lud       | js             | browserify | 0.8757  | 0.0602 | 0.7870 | 0.9410 | 10|
+| nqueens   | c              | wasm       | 5.3794  | 0.0133 | 5.3650 | 5.3990 | 10|
+| nqueens   | js             | browserify | 4.8758  | 0.0252 | 4.8370 | 4.9160 | 10|
+| nw        | c              | wasm       | 0.2051  | 0.0007 | 0.2040 | 0.2060 | 10|
+| nw        | js             | browserify | 0.2490  | 0.0139 | 0.2361 | 0.2754 | 10|
+| pagerank  | c              | wasm       | 0.6192  | 0.0008 | 0.6180 | 0.6200 | 10|
+| pagerank  | js             | browserify | 3.2609  | 0.0422 | 3.2162 | 3.3376 | 10|
+| spmv      | c              | wasm       | 1.6585  | 0.0379 | 1.6090 | 1.7220 | 10|
+| spmv      | js             | browserify | 2.3003  | 0.5442 | 1.8403 | 3.2397 | 10|
+| srad      | c              | wasm       | 3.3797  | 0.0391 | 3.3400 | 3.4180 | 10|
+| srad      | js             | browserify | 2.8306  | 0.0436 | 2.7905 | 2.9460 | 10|
