@@ -2,17 +2,20 @@
 
 ## Device
 
-|name   |cpu    |memory |OS     | GCC | Emscripten|
+|name   |cpu    |memory |OS     | GCC - WASM| Emscripten - WASM| GCC |
 |----   |---    |-------|-------|-----|-----------|
-|windows-bison    |  Intel(R) Core(TM) i7-3820 CPU @ 3.60GHz   | 16 GB |   Windows 10 Enterprise | llvm-gcc 4.2.1   |1.37.22 |
-# Web Environments
+|windows-bison    |  Intel(R) Core(TM) i7-3820 CPU @ 3.60GHz   | 16 GB |   Windows 10 Enterprise | llvm-gcc 4.2.1   |1.37.22 | 4.9.2 | 
+
+# Environments
 |environment    |version | JS Engine Version|Developer Build|
 |---            |------- |------- |-------|
 |chrome         |63.0.3239.84 |v8 6.3.292.46|-|
 |firefox        |Gecko/20100101 Firefox/57.0.2|-|-|
 |microsoft-edge |38.14393.1066.0|-|-|
 |Node |8.9.3 |v8 6.1.534.47| |
-# All Results
+|Native |GCC 4.9.2 |-|-|
+
+# Web Environments
 
 | category   | short-name    |
 | ---------- | ------------- |
@@ -225,3 +228,31 @@
 | spmv      | js             | browserify  | 1.9709  | 0.0532 | 1.9060 | 2.1560 | 30          |
 | srad      | c              | server-wasm | 3.5789  | 0.0172 | 3.5470 | 3.6250 | 30          |
 | srad      | js             | browserify  | 6.6252  | 0.0648 | 6.5150 | 6.7500 | 30          |
+
+# Native
+
+### Invariants (configuration parameters that are the same for all runs) ###
+
+| category    | short-name           |
+| ----------- | -------------------- |
+| platform    | windows-bison        |
+| environment | remote-windows-bison |
+| input-size  | medium               |
+platform=windows-bison,environment=remote-windows-bison,input-size=medium.csv
+
+### Results ###
+
+| benchmark | implementation | compiler   | mean(s) | std(s) | min(s) | max(s) | repetitions |
+| --------- | -------------- | ---------- | ------- | ------ | ------ | ------ | ----------- |
+| backprop  | c              | gcc-remote | 0.4584  | 0.0015 | 0.4566 | 0.4613 | 10          |
+| bfs       | cpp            | g++-remote | 0.1084  | 0.0015 | 0.1069 | 0.1117 | 10          |
+| crc       | c              | gcc-remote | 0.7683  | 0.0015 | 0.7662 | 0.7706 | 10          |
+| fft       | c              | gcc-remote | 1.5854  | 0.0057 | 1.5805 | 1.6007 | 10          |
+| hmm       | c              | gcc-remote | 1.9010  | 0.0074 | 1.8928 | 1.9162 | 10          |
+| lavamd    | c              | gcc-remote | 1.0711  | 0.0051 | 1.0647 | 1.0814 | 10          |
+| lud       | c              | gcc-remote | 1.9527  | 0.0053 | 1.9437 | 1.9601 | 10          |
+| nqueens   | c              | gcc-remote | 2.7709  | 0.0068 | 2.7618 | 2.7844 | 10          |
+| nw        | c              | gcc-remote | 0.0514  | 0.0008 | 0.0503 | 0.0523 | 10          |
+| pagerank  | c              | gcc-remote | 0.7031  | 0.0024 | 0.6990 | 0.7067 | 10          |
+| spmv      | c              | gcc-remote | 0.6258  | 0.0075 | 0.6149 | 0.6387 | 10          |
+| srad      | c              | gcc-remote | 3.0779  | 0.0128 | 3.0585 | 3.0976 | 10          |

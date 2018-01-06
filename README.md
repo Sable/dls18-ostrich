@@ -35,4 +35,25 @@ No difference performance between NodeJS
  - Think about WebAssembly
  - Think about website
 
+# Old vs. New Javascript
+
+- Have on graph showing all performance relative to c performance
+- Ubuntu deer work station
+- Expecting to get performance
+
+# Javascript vs. WebAssembly
+
+- Two Sections
+    - First, desktops
+    - Second, relative performance with javascript, how much faster is WebAssembly?
+# Vendor specific
+- Geo-mean graph for 5 devices, ignore 
+# Big vs. Medium vs. Small
+- Compare devices apple. 
+# NodeJS vs. Browser
+- Compare each NodeJS as version to each desktop
+
+# Write a paragraph for WebAssembly By Monday
+
+
 

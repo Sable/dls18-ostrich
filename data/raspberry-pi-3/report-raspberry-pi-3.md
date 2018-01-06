@@ -1,3 +1,17 @@
+## Device
+
+|name   |cpu    |memory |OS     | GCC | Emscripten|
+|----   |---    |-------|-------|-----|-----------|
+|raspberry-pi-3  |1.2 GHz 64/32-bit quad-core ARM Cortex-A53   |  1 GB| Linux Raspbian 4.9.35-v7|4.9.2 - 10|1.37.22  |
+# Environments
+|environment    |version | JS Engine Version|
+|---            |------- |------- |
+|Node |9.3.0|6.2.414.4-node.15|
+|Chromium63|56.0.2923.84|v8 5.6.326.45|
+|Native |-|-|
+
+
+# Node
 ### Invariants (configuration parameters that are the same for all runs) ###
 
 | category    | short-name            |
@@ -35,3 +49,33 @@ platform=raspberry3,environment=node-remote-raspberry,input-size=medium.csv
 | spmv      | js             | browserify  | 33.9186  | 0.1220 | 33.7230  | 34.2690  | 30          |
 | srad      | c              | server-wasm | 34.7474  | 0.2129 | 34.4410  | 35.1720  | 30          |
 | srad      | js             | browserify  | 79.6787  | 0.4355 | 79.0210  | 80.9720  | 30          |
+
+# Native 
+| Name | Version |
+|------| -----|
+|gcc   | 6.4.0|
+
+### Invariants (configuration parameters that are the same for all runs) ###
+
+| category    | short-name              |
+| ----------- | ----------------------- |
+| platform    | raspberry               |
+| environment | remote-raspberry-native |
+| input-size  | medium                  |
+platform=raspberry,environment=remote-raspberry-native,input-size=medium.csv
+
+### Results ###
+
+| benchmark | implementation | compiler   | mean(s) | std(s) | min(s)  | max(s)  | repetitions |
+| --------- | -------------- | ---------- | ------- | ------ | ------- | ------- | ----------- |
+| backprop  | c              | gcc-remote | 4.7061  | 0.0135 | 4.6871  | 4.7246  | 10          |
+| bfs       | cpp            | g++-remote | 1.7305  | 0.0052 | 1.7244  | 1.7389  | 10          |
+| crc       | c              | gcc-remote | 3.0807  | 0.0132 | 3.0680  | 3.1006  | 10          |
+| fft       | c              | gcc-remote | 9.9350  | 0.0291 | 9.9049  | 9.9816  | 10          |
+| hmm       | c              | gcc-remote | 80.2364 | 0.5340 | 79.4785 | 81.3550 | 10          |
+| lavamd    | c              | gcc-remote | 14.4871 | 0.0322 | 14.4470 | 14.5363 | 10          |
+| lud       | c              | gcc-remote | 50.4256 | 2.8528 | 46.8266 | 53.1220 | 10          |
+| nw        | c              | gcc-remote | 0.3584  | 0.0010 | 0.3568  | 0.3598  | 10          |
+| pagerank  | c              | gcc-remote | 4.3809  | 0.0163 | 4.3456  | 4.3940  | 10          |
+| spmv      | c              | gcc-remote | 14.0484 | 0.0440 | 13.9895 | 14.1173 | 10          |
+| srad      | c              | gcc-remote | 25.2152 | 0.8966 | 24.2902 | 26.5888 | 10          |
