@@ -61,3 +61,10 @@ No difference performance between NodeJS
 - 
 
 
+ubuntu-deer
+chrome63 corrected
+firefox34 corrected
+firefox39 corrected
+firefox57 corrected
+chromium38 corrected
+chromium63 corrected
