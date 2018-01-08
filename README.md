@@ -61,12 +61,8 @@ No difference performance between NodeJS
 - 
 
 
-ubuntu-deer
-chrome63 corrected
-firefox34 corrected
-firefox39 corrected
-firefox57 corrected
-chromium38 corrected
-chromium63 corrected
 
-nodejs left
+# Data that is left to collect
+- For nw and backprop
+    -   All browser data for windows-bison,mbp2013
+    - NodeJS data for all of desktops
