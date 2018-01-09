@@ -1,4 +1,4 @@
-benchmark,implementation,compiler,environment,mean(s),std(s),min(s),max(s),repetitions,iter0,iter1,iter2,iter3,iter4,iter5,iter6,iter7,iter8,iter9
+benchmark,implementation,compiler,environment,mean,std,min,max,repetitions,iter0,iter1,iter2,iter3,iter4,iter5,iter6,iter7,iter8,iter9
 bfs,js,browserify,chrome-iphone10,6.2034,0.1446,5.9464,6.5165,10,6.2180,6.2894,5.9464,6.1963,6.2655,6.1580,6.1434,6.1242,6.5165,6.1767
 bfs,js,browserify,firefox-iphone10,6.2665,0.1260,6.0460,6.4207,10,6.3562,6.0879,6.2380,6.0460,6.4207,6.3246,6.3775,6.3193,6.3200,6.1747
 bfs,cpp,wasm,chrome-iphone10,0.2009,0.0049,0.1920,0.2050,10,0.1920,0.1920,0.2010,0.2050,0.2050,0.2030,0.2030,0.2020,0.2010,0.2050

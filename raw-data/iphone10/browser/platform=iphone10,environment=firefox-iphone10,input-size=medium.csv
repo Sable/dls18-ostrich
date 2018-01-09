@@ -1,4 +1,4 @@
-benchmark,implementation,compiler,mean(s),std(s),min(s),max(s),repetitions,iter0,iter1,iter2,iter3,iter4,iter5,iter6,iter7,iter8,iter9
+benchmark,implementation,compiler,mean,std,min,max,repetitions,iter0,iter1,iter2,iter3,iter4,iter5,iter6,iter7,iter8,iter9
 bfs,js,browserify,6.2665,0.1260,6.0460,6.4207,10,6.3562,6.0879,6.2380,6.0460,6.4207,6.3246,6.3775,6.3193,6.3200,6.1747
 bfs,cpp,wasm,0.2009,0.0028,0.1970,0.2050,10,0.1980,0.2010,0.1990,0.2050,0.2020,0.2020,0.2020,0.1980,0.1970,0.2050
 lud,js,browserify,0.8251,0.0213,0.7940,0.8750,10,0.7940,0.8130,0.8340,0.8240,0.8750,0.8380,0.8200,0.8230,0.8130,0.8170

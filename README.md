@@ -64,5 +64,12 @@ No difference performance between NodeJS
 
 # Data that is left to collect
 - For nw and backprop
-    -   All browser data for windows-bison,mbp2013
-    - NodeJS data for all of desktops
+    - NodeJS data for mbp2013
+    - Browser data for raspberry pi
+
+
+WebAssembly is the new binary format web standard promised to overcome the shortcomings of Javascript. It was designed by all the major browser providers with two main goals, firstly, to provide a target to languages with typed semantics such as C and C++, and secondly, and perhaps most importantly, bringing the Web with near native performance, opening the doors to high performant applications such as video games and 3D graphics. The language introduces a binary format that maintains the security given by the web and provides fast, easy-to-transmit format.
+
+Geo-mean, four browsers and two devices.
+
+

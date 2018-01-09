@@ -214,6 +214,45 @@ implementation=js,compiler=browserify,platform=mbp2013,environment=chromium38,in
 | pagerank  | c              | wasm       | 0.5465s | +-0.0072s | 0.5360s | 0.5720s | 30          |
 | srad      | js             | browserify | 5.5862s | +-0.0926s | 5.4519s | 5.9214s | 30          |
 | srad      | c              | wasm       | 4.2460s | +-0.0390s | 4.1900s | 4.3180s | 30          |
+# Node
+
+### Invariants (configuration parameters that are the same for all runs) ###
+
+| category    | short-name            |
+| ----------- | --------------------- |
+| platform    | mbp2013               |
+| environment | node-remote-raspberry |
+| input-size  | medium                |
+platform=mbp2013,environment=node-remote-raspberry,input-size=medium.csv
+
+### Results ###
+
+| benchmark | implementation | compiler    | mean(s) | std(s) | min(s) | max(s) | repetitions |
+| --------- | -------------- | ----------- | ------- | ------ | ------ | ------ | ----------- |
+| backprop  | c              | server-wasm | 0.4841  | 0.0023 | 0.4820 | 0.4880 | 10          |
+| backprop  | js             | browserify  | 0.8550  | 0.0051 | 0.8460 | 0.8630 | 10          |
+| bfs       | cpp            | server-wasm | 0.2143  | 0.0588 | 0.1700 | 0.3670 | 10          |
+| bfs       | js             | browserify  | 1.6655  | 0.2725 | 1.0570 | 1.9530 | 10          |
+| crc       | c              | server-wasm | 0.9866  | 0.0099 | 0.9740 | 1.0020 | 10          |
+| crc       | js             | browserify  | 1.0544  | 0.0115 | 1.0380 | 1.0690 | 10          |
+| fft       | c              | server-wasm | 1.1016  | 0.0133 | 1.0810 | 1.1160 | 10          |
+| fft       | js             | browserify  | 2.5526  | 0.0186 | 2.5260 | 2.5870 | 10          |
+| hmm       | c              | server-wasm | 2.7365  | 0.0217 | 2.7080 | 2.7800 | 10          |
+| hmm       | js             | browserify  | 4.6197  | 0.2553 | 4.2440 | 5.0410 | 10          |
+| lavamd    | c              | server-wasm | 1.3972  | 0.0109 | 1.3810 | 1.4230 | 10          |
+| lavamd    | js             | browserify  | 2.0937  | 0.1000 | 2.0500 | 2.3760 | 10          |
+| lud       | c              | server-wasm | 2.0826  | 0.0390 | 2.0260 | 2.1520 | 10          |
+| lud       | js             | browserify  | 2.9178  | 0.0991 | 2.7600 | 3.0920 | 10          |
+| nqueens   | c              | server-wasm | 4.7497  | 0.0216 | 4.7150 | 4.7850 | 10          |
+| nqueens   | js             | browserify  | 7.2149  | 0.0605 | 7.1060 | 7.3170 | 10          |
+| nw        | c              | server-wasm | 0.1626  | 0.0025 | 0.1590 | 0.1660 | 10          |
+| nw        | js             | browserify  | 0.3285  | 0.0036 | 0.3230 | 0.3340 | 10          |
+| pagerank  | c              | server-wasm | 0.3994  | 0.0351 | 0.3650 | 0.4780 | 10          |
+| pagerank  | js             | browserify  | 0.6682  | 0.0139 | 0.6510 | 0.7020 | 10          |
+| spmv      | c              | server-wasm | 1.0589  | 0.0098 | 1.0470 | 1.0810 | 10          |
+| spmv      | js             | browserify  | 2.1386  | 0.0279 | 2.1110 | 2.2060 | 10          |
+| srad      | c              | server-wasm | 3.6430  | 0.0546 | 3.5670 | 3.7480 | 10          |
+| srad      | js             | browserify  | 7.8094  | 0.0531 | 7.7380 | 7.9200 | 10          |
 
 # Native
 ### Invariants (configuration parameters that are the same for all runs) ###
