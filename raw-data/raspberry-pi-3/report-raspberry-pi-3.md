@@ -7,9 +7,37 @@
 |environment    |version | JS Engine Version|
 |---            |------- |------- |
 |Node |9.3.0|6.2.414.4-node.15|
-|Chromium63|56.0.2923.84|v8 5.6.326.45|
+|Chromium56|56.0.2923.84|v8 5.6.326.45|
 |Native |-|-|
 
+# Chromium 56
+### Invariants (configuration parameters that are the same for all runs) ###
+
+| category       | short-name           |
+| -------------- | -------------------- |
+| implementation | js                   |
+| compiler       | browserify           |
+| platform       | raspberry            |
+| environment    | chromium56-raspberry |
+| input-size     | medium               |
+implementation=js,compiler=browserify,platform=raspberry,environment=chromium56-raspberry,input-size=medium.csv
+
+### Results ###
+
+| benchmark | mean(s)  | std(s) | min(s)   | max(s)   | repetitions |
+| --------- | -------- | ------ | -------- | -------- | ----------- |
+| backprop  | 9.3714   | 0.0364 | 9.3296   | 9.4620   | 10          |
+| bfs       | 4.8534   | 0.0649 | 4.7595   | 4.9737   | 10          |
+| crc       | 15.6839  | 0.0893 | 15.5720  | 15.8240  | 10          |
+| fft       | 23.1345  | 0.2761 | 22.7967  | 23.4702  | 10          |
+| hmm       | 114.1229 | 6.0008 | 107.5562 | 121.8549 | 10          |
+| lavamd    | 188.5133 | 1.1660 | 186.9149 | 190.0896 | 10          |
+| lud       | 69.2386  | 2.9708 | 63.8780  | 71.1780  | 10          |
+| nqueens   | 36.0173  | 0.0713 | 35.9310  | 36.0990  | 10          |
+| nw        | 1.9323   | 0.0112 | 1.9113   | 1.9521   | 10          |
+| pagerank  | 6.1553   | 0.0282 | 6.1149   | 6.1997   | 10          |
+| spmv      | 34.5156  | 0.1935 | 34.1092  | 34.7910  | 10          |
+| srad      | 75.5569  | 0.7623 | 74.5374  | 76.6822  | 10          |
 
 # Node
 ### Invariants (configuration parameters that are the same for all runs) ###
@@ -49,6 +77,7 @@ platform=raspberry3,environment=node-remote-raspberry,input-size=medium.csv
 | spmv      | js             | browserify  | 33.9186  | 0.1220 | 33.7230  | 34.2690  | 30          |
 | srad      | c              | server-wasm | 34.7474  | 0.2129 | 34.4410  | 35.1720  | 30          |
 | srad      | js             | browserify  | 79.6787  | 0.4355 | 79.0210  | 80.9720  | 30          |
+
 
 # Native 
 | Name | Version |
