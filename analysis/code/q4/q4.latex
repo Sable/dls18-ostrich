@@ -1,0 +1,23 @@
+\begin{tabular}{llllllllllll}
+\toprule
+        Device & Chrome63-js & Chrome63-wasm-c & Firefox57-js & Firefox57-wasm-c & Safari11-js & Safari11-wasm-c & Microsoft-Edge-js & Microsoft-Edge-wasm-c & Chromium56-js & mean-js & mean-wasm \\
+\midrule
+       mbp2013 &           1 &               1 &          0.9 &              0.9 &         1.2 &             1.4 &                 - &                     - &             - &       1 &       1.1 \\
+ windows-bison &           1 &             1.1 &          0.9 &                1 &           - &               - &               1.5 &                   1.1 &             - &     1.1 &       1.1 \\
+   ubuntu-deer &         0.6 &             0.5 &          0.4 &              0.4 &           - &               - &                 - &                     - &             - &     0.5 &       0.4 \\
+  raspberry-pi &           - &               - &            - &                - &           - &               - &                 - &                     - &           1.1 &     1.1 &         - \\
+  Mean Browser &         0.9 &             0.9 &          0.7 &              0.8 &         1.2 &             1.4 &               1.5 &                   1.1 &           1.1 &       - &         - \\
+\bottomrule
+\end{tabular}
+\begin{table}[htbp]
+		\caption{Browser speedup performance relative to their respective Wasm and Js Nodes for each device}
+	\begin{tabular}{llllllllllcc}
+
+		\textbf{Device} & \rot{Chrome63-js} & \rot{Chrome63-wasm-c} & \rot{Firefox57-js} & \rot{Firefox57-wasm-c} & \rot{Safari11-js} & \rot{Safari11-wasm-c} & \rot{Microsoft-Edge-js} & \rot{Microsoft-Edge-wasm-c} & \rot{Chromium56-js} &\textbf{ \rot{mean-js}} & \textbf{\rot{mean-wasm}} \\
+		\hline
+       mbp2013 &           1 &               1 &          0.9 &              0.9 &         1.2 &             1.4 &                 - &                     - &             - &       1 &       1.1 \\
+windows-bison &           1 &             1.1 &          0.9 &                1 &           - &               - &               1.5 &                   1.1 &             - &     1.1 &       1.1 \\
+ubuntu-deer &         0.6 &             0.5 &          0.4 &              0.4 &           - &               - &                 - &                     - &             - &     0.5 &       0.4 \\
+raspberry-pi &           - &               - &            - &                - &           - &               - &                 - &                     - &           1.1 &     1.1 &         - \\
+\textbf{mean-browser} &         0.9 &             0.9 &          0.7 &              0.8 &         1.2 &             1.4 &               1.5 &                   1.1 &           1.1 &       - &         - \\
+	\end{tabular}

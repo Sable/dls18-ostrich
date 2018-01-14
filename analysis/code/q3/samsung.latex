@@ -1,0 +1,8 @@
+\begin{tabular}{lrrrr}
+\toprule
+         Device &  Chrome63-js-nolavamd &  Firefox57-js-nolavamd &  Chrome63-js &  Firefox57-js \\
+\midrule
+ samsung-tab-s3 &                  0.92 &                   0.76 &         1.19 &          1.04 \\
+     samsung-s8 &                  0.85 &                   0.73 &         1.07 &          0.98 \\
+\bottomrule
+\end{tabular}

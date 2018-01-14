@@ -1,0 +1,6 @@
+Device,Chrome63-js,Chrome63-wasm-c,Firefox57-js,Firefox57-wasm-c,Safari11-js,Safari11-wasm-c,Microsoft-Edge-js,Microsoft-Edge-wasm-c,Chromium56-js,mean-js,mean-wasm
+mbp2013,1.0,1.0,0.9,0.9,1.2,1.4,-,-,-,1.0,1.1
+windows-bison,1.0,1.1,0.9,1.0,-,-,1.5,1.1,-,1.1,1.1
+ubuntu-deer,0.6,0.5,0.4,0.4,-,-,-,-,-,0.5,0.4
+raspberry-pi,-,-,-,-,-,-,-,-,1.1,1.1,-
+Mean Browser,0.9,0.9,0.7,0.8,1.2,1.4,1.5,1.1,1.1,-,-
