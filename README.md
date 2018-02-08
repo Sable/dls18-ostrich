@@ -3,10 +3,10 @@
 - [Table of Contents](#table-of-contents)
   * [Devices](#devices)
   * [Experiments](#experiments)
-    + [RQ1: Old versus New JavaScript Engines](#rq1:-old-versus-new-javascript-engines)
-    + [RQ2: JavaScript versus WebAssembly](#rq2:-javascript-versus-webassembly)
-    + [RQ3: Portable versus Vendor-specific Browsers](#rq3:-portable-versus-vendor-specific-browsers)
-    + [RQ4: Server-side Node.js versus Client-side Browsers](#rq4:-server-side-nodejs-versus-client-side-browsers)
+    + [RQ1: Old versus New JavaScript Engines](#rq1-old-versus-new-javascript-engines)
+    + [RQ2: JavaScript versus WebAssembly](#rq2-javascript-versus-webassembly)
+    + [RQ3: Portable versus Vendor-specific Browsers](#rq3-portable-versus-vendor-specific-browsers)
+    + [RQ4: Server-side Node.js versus Client-side Browsers](#rq4-server-side-nodejs-versus-client-side-browsers)
     + [RQ5: Best Performers](#rq5--best-performers)
   * [Raw Timings](#raw-timings)
     + [iPhone 10](#iphone-10)
@@ -37,7 +37,7 @@
 
 ## Experiments 
 
-### RQ1: Old versus New JavaScript Engines
+### RQ1 Old versus New JavaScript Engines
 
 > __Conclusion__: The overall performance of JavaScript against native C versions remained within a factor of 2. The current Firefox browser has presented an overall improvement, compared to the older Firefox version. The current Chrome browser, however, has presented a decrease in overall performance compared to the older Chrome version.
 
@@ -47,7 +47,7 @@ __Figure 2__. JavaScript Performance of the MacBook Pro 2013 laptop against nati
 __Figure 3__. JavaScript Performance of Ubuntu Workstation against native C, using the old and current versions for Chrome and Firefox
 ![Figure 3. JavaScript Performance of Ubuntu Workstation against native C](./analysis/plots/browsers-old-js-ubuntu-deer.png)
 
-### RQ2: JavaScript versus WebAssembly
+### RQ2 JavaScript versus WebAssembly
 
 > __Conclusion__:  All browsers demonstrate significant performance improvements for WebAssembly, in the range of 2x speedups over the same browser’s JavaScript engine. Furthermore, WebAssembly achieves an overall performance close to 1 against native C, achieving an even greater performance for Firefox57 in the ubuntu-deer platform.
 
@@ -60,7 +60,7 @@ __Figure 5__. WebAssembly performance relative to C on the different platforms.
 __Figure 6__. WebAssembly performance relative to JavaScript on the different platforms.
 ![Figure 6.](./analysis/plots/geomeans-wasm-vs-js.png)
 
-### RQ3: Portable versus Vendor-specific Browsers
+### RQ3 Portable versus Vendor-specific Browsers
 
 > __Conclusion__:   In general the performance of the proprietary browsers is close for all the mobile and tablet devices, while presenting some differences in the windows-bison workstation and the mbp2013 laptop, where the proprietary browsers are performing worse overall. Therefore no clear trend of vendors taking advantage of their hardware architecture knowledge has been found.
 
@@ -68,7 +68,7 @@ __Figure 7__. Performance of browsers relative to proprietary respective browser
 ![Figure 7.](./analysis/plots/geomeans-proprietary.png)
 
 
-### RQ4: Server-side Node.js versus Client-side Browsers
+### RQ4 Server-side Node.js versus Client-side Browsers
 > __Conclusion__: Node.js was overall slower than native C code for both JavaScript and WebAssembly, although the best WebAssembly gave reasonable performance of 0.8 the speed of native C. Server-side Node.js matched the best browser performance for both JavaScript and WebAssembly for all the devices, except for the ubuntu-deer device.
 
 __Figure 9__: Performance of Node.js in different workstations relative to C.
@@ -83,7 +83,7 @@ __Table 6__: Browser speedup performance relative to their respective WebAssembl
 | raspberry-pi | - | - | - | - | - | - | - | - | 1.1 |
 
 
-### RQ5: Best Performers
+### RQ5 Best Performers
 > __Conclusion__: The best overall browser performance was by the Firefox 57 browser, the order of device performance has the two workstations first, surprisingly followed by the iPhone 10, the rest of the order is: MacBook Pro 2013 laptop, iPad Pro, Samsung S8, Pixel 2, Samsung Tab S3 and lastly, Raspberry Pi Model B.
 
 __Table 7__: Device performance across environments using the native C raspberry pi implementation as baseline for geometric means.
