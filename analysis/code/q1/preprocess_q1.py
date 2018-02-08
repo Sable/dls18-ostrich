@@ -121,9 +121,9 @@ if ubuntu_deer:
 #============================================
 if mbp2013:
     # Constants
-    OUTPUT_FILE_OLD_WASM_JS = "./data/browsers-old-wasm-js-mbp2013.csv"
-    OUTPUT_FILE_OLD_JS = "./data/browsers-old-js-mbp2013.csv"
-    OUTPUT_FILE_ALL_BROWSER_DATA= "./data/all-browsers-mbp2013.csv"
+    OUTPUT_FILE_OLD_WASM_JS = "./data_v2/browsers-old-wasm-js-mbp2013.csv"
+    OUTPUT_FILE_OLD_JS = "./data_v2/browsers-old-js-mbp2013.csv"
+    OUTPUT_FILE_ALL_BROWSER_DATA= "./data_v2/all-browsers-mbp2013.csv"
 
     # Set up find command
     findCMD = 'find /Users/davidherrera/Documents/Research/ostrich-updated/ecoop18-ostrich/raw-data/mbp2013 -name "*.csv"'

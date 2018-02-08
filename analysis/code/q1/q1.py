@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
-from classes.plots import Plots
-from classes.speedup import histogram_plot
+from analysis.code.classes.plots import Plots
+from analysis.code.classes.speedup import histogram_plot
 from scipy.stats.mstats import gmean
 include_name = False
 individual_plots =  True
@@ -14,7 +14,7 @@ if individual_plots:
     # histogram_plot("../clean-data/browsers-old-wasm-js-ubuntu-deer.csv",
     #                "../../plots/browsers-old-wasm-js-ubuntu-deer.png",
     #                12, 7,name_plot="Browser Performance - Ubuntu-Deer", include_name=include_name,y_lim=[0,5])
-    histogram_plot("../clean-data/browsers-old-js-ubuntu-deer.csv",
+    histogram_plot("./data_v2/browsers-old-js-ubuntu-deer.csv",
                    "../../plots/browsers-old-js-ubuntu-deer.png",
                    12, 5,name_plot="Browser Performance JS - Ubuntu-Deer", include_name=include_name,y_lim=[0,5])
     # # Individual plot of # Firefox and Chrome plots-deer browsers

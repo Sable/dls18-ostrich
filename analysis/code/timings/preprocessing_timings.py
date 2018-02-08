@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-from classes.preprocess import new_column, new_columns
+from analysis.code.classes.preprocess import new_column, new_columns
 import subprocess
 # constants for clean up
 ubuntu_deer = True
